@@ -25,9 +25,12 @@
         <hr>
         <form class="form-group my-2">
 
-          <input class="form-control" placeholder="Email" type="email">
-          <input class="form-control my-2" placeholder="Contraseña" type="password">
-          <button type="button"  class="btn btn-primary btn-block" > Login  </button>
+          <input  name="email" class="form-control" placeholder="Email" type="email" #email ngModel required>
+          <input  name="password" class="form-control my-2" placeholder="Contraseña" type="password" #password ngModel required>
+          <!-- <button  [routerLink]="['/dashboard',email.value]" type="button" class="btn btn-primary btn-block"> Login  </button> -->
+          <!-- <a [routerLink] = "['/dashboard']" type="submit" class="btn btn-primary btn-block">Login</a> -->
+          <button type="submit" (click)="iniciarSesion(email.value,password.value)"  class="btn btn-block btn-primary" > Login</button>
+
           <p class="text-center"><a href="#" class="btn">Recuperar contraseña</a></p>
 
         </form>
