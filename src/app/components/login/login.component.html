@@ -1,0 +1,84 @@
+<div class="jumbotron jumbotron-fluid" style="background-color: #e3f2fd;">
+  <div class="container">
+    <h1 class="display-5 text-center text-primary">- Sistema Gestor de Propiedad Horizontal -</h1>
+    <hr>
+    <p class="lead text-center"> Ley 675 / 2001 | Por medio de la cual se expide el régimen de propiedad horizontal. </p>
+  </div>
+</div>
+<div class="container">
+
+  <div class="row ">
+    <div class="col">
+      <div *ngFor="let modulo of modulos; let i = index;" class="card text-center border" style="margin-top:10px">
+        <div class="card-header">{{ i+1 }}. {{modulo.nombre | uppercase}}</div>
+        <div class="card-body">
+          <p class="card-text">{{modulo.descripcion}}</p>
+          <a href="#" class="btn btn-outline">Leer Más</a>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <div class="col">
+      <div class="card-body border" style="margin-top:10px">
+        <h5 class="card-title text-center mb-4 mt-1">Inicio de Sesión</h5>
+        <hr>
+        <form class="form-group my-2">
+
+          <input class="form-control" placeholder="Email" type="email">
+          <input class="form-control my-2" placeholder="Contraseña" type="password">
+          <button type="button"  class="btn btn-primary btn-block" > Login  </button>
+          <p class="text-center"><a href="#" class="btn">Recuperar contraseña</a></p>
+
+        </form>
+
+
+      </div>
+      <div class="card-body border my-5">
+        <h5 class="card-title text-center my-4 mb-4 mt-1">Registro de Administrador</h5>
+        <hr>
+        <div class="form-row">
+
+          <div class="form-group col">
+            <input type="text" class="form-control" placeholder="Nombre(s)">
+
+            <div class="form-group form-inline my-2">
+              <select class="form-control" style="margin-right:10px">
+              <option>CC</option>
+              <option>TI</option>
+              <option>Pasaporte</option>
+              <option>Otro</option>
+              </select>
+
+              <input type="number" class="form-control col" placeholder="Identificación">
+            </div>
+            <div class="form-group form-inline">
+              <input class="form-control col" style="margin-right:10px" placeholder="Email" type="email">
+              <button type="button" name="button" class="btn btn-outline-success">+</button>
+            </div>
+            <div class="form-group form-inline">
+              <input class="form-control col" style="margin-right:10px" placeholder="Teléfono" type="text">
+              <button type="button" name="button" class="btn btn-outline-success">+</button>
+            </div>
+
+
+
+            <input type="text" name="" placeholder="Dirección" class="form-control">
+            <button type="button" name="button" class="btn btn-primary col my-3"> Aceptar</button>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bg-dark">
+  <p class="text-light text-center"><small> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+    </small></p>
+</div>
