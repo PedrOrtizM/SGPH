@@ -2,19 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+//RUTAS
+import {APP_ROUTING} from './app.routes';
 
-import {app_routing} from './app.routes';
 
-
+//COMPONENTES
 import { AppComponent } from './app.component';
-
 import { LoginComponent } from './components/login/login.component';
-
 import { ModulosService } from './services/modulos.service';
 
 
 
-
+//SERVICIOS
+import {AuthService} from './services/auth.service';
 
 
 
@@ -29,10 +29,10 @@ import { ModulosService } from './services/modulos.service';
   ],
   imports: [
     BrowserModule,
-    app_routing
+    APP_ROUTING
 
   ],
-  providers: [ModulosService],
+  providers: [ModulosService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
